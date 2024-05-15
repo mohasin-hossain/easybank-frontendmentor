@@ -1,6 +1,7 @@
 %heading {
   font-family: $body-font;
   font-weight: 400;
+  color: $DarkBlue;
 }
 
 .heading-1 {
@@ -32,4 +33,10 @@
 .heading-3 {
   @extend %heading;
   font-size: 3rem;
+}
+
+.paragraph-1 {
+    @extend %heading;
+    color: $GrayishBlue;
+    line-height: 1.6;
 }
