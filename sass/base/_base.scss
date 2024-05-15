@@ -27,6 +27,14 @@ body {
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;
+
+    @include respond(tab-land) {
+        padding: 0 10rem;
+    }
+
+    @include respond(small-phone) {
+        padding: 0 5rem;
+    }
 }
 
 
