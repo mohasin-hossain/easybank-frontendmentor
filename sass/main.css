@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-.paragraph-1, .heading-3, .heading-2, .heading-1 {
+.paragraph-1, .heading-4, .heading-3, .heading-2, .heading-1 {
   font-family: "Public Sans", sans-serif;
   font-weight: 400;
   color: hsl(233, 26%, 24%);
@@ -50,6 +50,11 @@
   .heading-3 {
     font-size: 2.5rem;
   }
+}
+
+.heading-4 {
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 
 .paragraph-1 {
@@ -353,4 +358,44 @@ body {
 }
 .features__card h3 {
   padding: 2rem 0;
+}
+
+.articles {
+  padding: 10rem 0;
+  background-color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+}
+.articles h2 {
+  padding-bottom: 5rem;
+}
+.articles__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 3rem;
+}
+.articles__container .article {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.8rem;
+}
+.articles__container .article__image img {
+  width: 100%;
+  height: 20rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .articles__container .article__image img {
+    height: 30rem;
+  }
+}
+.articles__container .article__details {
+  padding: 2rem;
+}
+.articles__container .article__details h3 {
+  padding: 0.8rem 0;
+}
+.articles__container .article__details p {
+  line-height: 1.3;
+  text-align: justify;
 }/*# sourceMappingURL=main.css.map */
