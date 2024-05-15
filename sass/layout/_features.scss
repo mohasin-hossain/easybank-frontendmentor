@@ -1,0 +1,40 @@
+.features {
+  padding: 10rem 0;
+  background-color: $LightGrayishBlue;
+  min-height: 100vh;
+
+  &__details {
+    width: 45%;
+
+    & p {
+      padding-top: 2rem;
+    }
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+
+    @include respond(small-phone) {
+      text-align: center;
+    }
+  }
+
+  &__container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 3rem;
+  }
+
+  &__card {
+    text-align: justify;
+
+    @include respond(small-phone) {
+      text-align: center;
+    }
+
+    & h3 {
+      padding: 2rem 0;
+    }
+  }
+}

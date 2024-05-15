@@ -19,11 +19,7 @@
 
 .heading-2 {
   @extend %heading;
-  font-size: 5rem;
-
-  @include respond(tab-land) {
-    font-size: 4rem;
-  }
+  font-size: 4rem;
 
   @include respond(tab-land) {
     font-size: 3rem;
@@ -33,6 +29,10 @@
 .heading-3 {
   @extend %heading;
   font-size: 3rem;
+
+  @include respond(tab-land) {
+    font-size: 2.5rem
+  }
 }
 
 .paragraph-1 {

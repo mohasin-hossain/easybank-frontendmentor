@@ -25,17 +25,7 @@
 }
 
 .heading-2 {
-  font-size: 5rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .heading-2 {
-    font-size: 4rem;
-  }
-}
-@media only screen and (max-width: 78.75em) {
-  .heading-2 {
-    font-size: 4rem;
-  }
+  font-size: 4rem;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-2 {
@@ -50,6 +40,16 @@
 
 .heading-3 {
   font-size: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-3 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 78.75em) {
+  .heading-3 {
+    font-size: 2.5rem;
+  }
 }
 
 .paragraph-1 {
@@ -309,4 +309,48 @@ body {
 }
 .header__right .img__mobile img {
   width: 100%;
+}
+
+.features {
+  padding: 10rem 0;
+  background-color: hsl(220, 16%, 96%);
+  min-height: 100vh;
+}
+.features__details {
+  width: 45%;
+}
+.features__details p {
+  padding-top: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .features__details {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 78.75em) {
+  .features__details {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .features__details {
+    text-align: center;
+  }
+}
+.features__container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 3rem;
+}
+.features__card {
+  text-align: justify;
+}
+@media only screen and (max-width: 37.5em) {
+  .features__card {
+    text-align: center;
+  }
+}
+.features__card h3 {
+  padding: 2rem 0;
 }/*# sourceMappingURL=main.css.map */
