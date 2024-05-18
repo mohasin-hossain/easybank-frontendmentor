@@ -1,17 +1,42 @@
 .header {
   background-color: $VeryLightGray;
-  height: calc(100vh - 7rem);
+  min-height: calc(100vh - 7rem);
+  overflow: hidden;
+
+  @include respond(tab-land) {
+    min-height: unset;
+  }
 
   &__flex {
     display: flex;
     align-items: center;
+
+    @include respond(small-phone) {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
   }
 
   &__left {
     max-width: 45rem;
 
+    @include respond(small-phone) {
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+
     & .paragraph-1 {
       padding: 3rem 0;
+    }
+
+    @include respond(tab-land) {
+      h1 {
+        margin-top: 5rem;
+      }
+
+      .btn {
+        margin-bottom: 5rem;
+      }
     }
   }
 
@@ -19,8 +44,25 @@
     margin: -20rem -22rem 0 0;
     position: relative;
 
-    & .img__background img {
+    @include respond(small-phone) {
+      margin: -12rem 3rem 0 -6rem;
+    }
+
+    & .img__background img:first-child {
       width: 100%;
+
+      @include respond(small-phone) {
+        display: none;
+      }
+    }
+
+    & .img__background img:last-child {
+      display: none;
+
+      @include respond(small-phone) {
+        display: block;
+        width: 130%;
+      }
     }
 
     & .img__mobile {
@@ -29,8 +71,22 @@
       right: 0;
       z-index: 2;
 
+      @include respond(small-phone) {
+        top: 2rem;
+        left: 2rem;
+        right: -8rem;
+      }
+
       & img {
         width: 100%;
+
+        @include respond(tab-land) {
+          width: 70%;
+        }
+
+        @include respond(small-phone) {
+          width: 100%;
+        }
       }
     }
   }

@@ -287,24 +287,82 @@ body {
 
 .header {
   background-color: hsl(0, 0%, 98%);
-  height: calc(100vh - 7rem);
+  min-height: calc(100vh - 7rem);
+  overflow: hidden;
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    min-height: unset;
+  }
+}
+@media only screen and (max-width: 78.75em) {
+  .header {
+    min-height: unset;
+  }
 }
 .header__flex {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .header__flex {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
 .header__left {
   max-width: 45rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .header__left {
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+}
 .header__left .paragraph-1 {
   padding: 3rem 0;
+}
+@media only screen and (max-width: 37.5em) {
+  .header__left h1 {
+    margin-top: 5rem;
+  }
+  .header__left .btn {
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 78.75em) {
+  .header__left h1 {
+    margin-top: 5rem;
+  }
+  .header__left .btn {
+    margin-bottom: 5rem;
+  }
 }
 .header__right {
   margin: -20rem -22rem 0 0;
   position: relative;
 }
-.header__right .img__background img {
+@media only screen and (max-width: 37.5em) {
+  .header__right {
+    margin: -12rem 3rem 0 -6rem;
+  }
+}
+.header__right .img__background img:first-child {
   width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .header__right .img__background img:first-child {
+    display: none;
+  }
+}
+.header__right .img__background img:last-child {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .header__right .img__background img:last-child {
+    display: block;
+    width: 130%;
+  }
 }
 .header__right .img__mobile {
   position: absolute;
@@ -312,8 +370,30 @@ body {
   right: 0;
   z-index: 2;
 }
+@media only screen and (max-width: 37.5em) {
+  .header__right .img__mobile {
+    top: 2rem;
+    left: 2rem;
+    right: -8rem;
+  }
+}
 .header__right .img__mobile img {
   width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .header__right .img__mobile img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 78.75em) {
+  .header__right .img__mobile img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__right .img__mobile img {
+    width: 100%;
+  }
 }
 
 .features {
